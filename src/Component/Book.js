@@ -1,6 +1,6 @@
 import Readct, { Component } from "react";
 import PropTypes from "prop-types";
-import ShelfUpdater from "./Component/ShelfUpdater"
+import ShelfUpdater from "./Components/ShelfUpdater"
 
 class Book extends Component {
 	static propTypes = {
@@ -35,3 +35,6 @@ class Book extends Component {
 
 
 }
+
+
+export default Book;
