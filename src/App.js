@@ -1,8 +1,9 @@
+
 import React from 'react';
 // import * as BooksAPI from './BooksAPI'
 import * as BooksAPI from "./BooksAPI";
-import { Link } from " react-router-dom";
-import BooksShelf from "./Component/BooksShelf";
+import { Link, Route } from " react-router-dom";
+import ShelfBooks from "./Component/BooksShelf";
 import SearchBooks from "./Component/SearchBooks";
 import './App.css'
 
@@ -25,7 +26,7 @@ class BooksApp extends React.Component {
 
   getShelfBooks(shelfName) {
 
-    return this.state.books.filter((b) => b.shelf ==== shelfName)
+    return this.state.books.filter((b) => b.shelf === shelfName)
   }
 
   updateShelf = (book, newShelf) => {
@@ -73,20 +74,20 @@ class BooksApp extends React.Component {
                         </div>
                         <div className="list-books-content">
                             <div>
-                                <Shelf
+                                <ShelfBooks
                                     title="Currently Reading"
                                     books={this.getShelfBooks("currentlyReading")}
                                     updateShelf={this.updateShelf}
                                 />
-                                <Shelf
+                                <ShelfBooks
                                     title="Want to Read"
                                     books={this.getShelfBooks("wantToRead")}
                                     updateShelf={this.updateShelf}
                                 />
-                                <Shelf
+                                <ShelfBooks
                                     title="Read"
                                     books={this.getShelfBooks("read")}
-                                    Shelf={this.updateShelf}
+                                    ShelfBooks={this.updateShelf}
                                 />
                             </div>
                         </div>
@@ -106,6 +107,5 @@ class BooksApp extends React.Component {
             </div>
         )
     }
-
-
+}
 export default BooksApp
