@@ -1,12 +1,11 @@
-import Readct, { Component } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ShelfUpdater from "./Components/ShelfUpdater"
+import ShelfUpdater from "./ShelfUpdater"
 
 class Book extends Component {
 	static propTypes = {
-		book: propTypes.object.isRequired,
+		book: PropTypes.object.isRequired,
 		updateShelf: PropTypes.func.isRequired
-
 	};
 
    render() {
@@ -18,7 +17,7 @@ class Book extends Component {
                     <div className="book-cover" style={{backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
                     <ShelfUpdater
                         book={book}
-                        updateShelf = {this.props.updateShelf}/>
+                        updateShelf={this.props.updateShelf}/>
                 </div>
                 <div className="book-title">{book.name}</div>
                 <div className="book-authors">{book.authors}</div>
@@ -28,12 +27,7 @@ class Book extends Component {
 
 
     	)
-
    }
-
-
-
-
 }
 
 

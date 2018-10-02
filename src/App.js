@@ -1,13 +1,15 @@
-
-import React from 'react';
+import React from "react";
 // import * as BooksAPI from './BooksAPI'
 import * as BooksAPI from "./BooksAPI";
-import { Link, Route } from " react-router-dom";
-import ShelfBooks from "./Component/BooksShelf";
+import { Link, Route } from "react-router-dom";
+import ShelfBooks from "./Component/ShelfBooks";
 import SearchBooks from "./Component/SearchBooks";
-import './App.css'
+import "./App.css";
 
 class BooksApp extends React.Component {
+    
+    MAX_RESULTS = 30;
+
   state = {
     books: [],
     searchBooks:[]
@@ -63,7 +65,7 @@ class BooksApp extends React.Component {
             });
         }
     };
-
+    
     render() {
         return (
             <div className="app">
@@ -98,7 +100,7 @@ class BooksApp extends React.Component {
                 )}/>
 
                 <Route path="/search" render={({ history }) => (
-                    <Search
+                    <SearchBooks
                         books={this.state.searchBooks}
                         updateQuery={this.updateQuery}
                         updteShelf={this.updateShelf}
@@ -108,4 +110,4 @@ class BooksApp extends React.Component {
         )
     }
 }
-export default BooksApp
+export default BooksApp;

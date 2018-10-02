@@ -1,30 +1,30 @@
-import Readct, { Components } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 
 class ShelfUpdater extends Component {
 	static PropTypes = {
 		book: PropTypes.object.isRequired,
-		updateShelf.func.isRequired
+		updateShelf: PropTypes.func.isRequired
 
 	};
      
-     state = {
+     state= {
 
-     	currentShelf: this .props.book.shelf,
+     	currentShelf: this.props.book.shelf,
      	updating: false
      };
          // update shelf method
 
-     updateShelf = (evt) => {
+     updateShelf= (evt) => {
      	this.props.updateShelf(this.props.book, evt.target.value);
      	this.setState({
-     		currentShelf: evt.target.value,
+     		currentShelf:evt.target.value,
      		updating: true
      	});
 
      };
-  Components WillReceiveProps() {
+  ComponentWillReceiveProps() {
   	// 
   	this.setState ({
 
@@ -55,3 +55,4 @@ class ShelfUpdater extends Component {
 
 
 }
+export default ShelfUpdater;
