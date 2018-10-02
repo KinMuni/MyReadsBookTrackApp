@@ -8,7 +8,7 @@ import "./App.css";
 
 class BooksApp extends React.Component {
     
-    MAX_RESULTS = 30;
+   MAX_RESULT = 30;
 
   state = {
     books: [],
@@ -44,7 +44,7 @@ class BooksApp extends React.Component {
 
   updateQuery = (query) => {
         if(query){
-            BooksAPI.search(query, this.MAX_RESULTS).then((books) => {
+            BooksAPI.search(query, this.MAX_RESULT).then((books) => {
                 // if the BookAPI.search worked properly, this would be unnecessary
                 if(books.length){
                     books.forEach((book, index) => {
