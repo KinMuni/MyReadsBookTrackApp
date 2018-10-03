@@ -88,7 +88,7 @@ class BooksApp extends React.Component {
                                 <ShelfBooks
                                     title="Read"
                                     books={this.getShelfBooks("read")}
-                                    ShelfBooks={this.updateShelf}
+                                    updateShelf={this.updateShelf}
                                 />
                             </div>
                         </div>
