@@ -38,28 +38,24 @@ class ShelfUpdater extends Component {
 
             return (
 
-                <
-                div className = "book-shelf-changer" >
-                <
-                select value = {
+                <div className = "book-shelf-changer" >
+                <select value = {
                     this.state.currentShelf
                 }
                 onChange = {
                     this.updateShelf
                 } >
-                <
-                option value = "move"
-                disabled > Move to... < /option> <
-                option value = "currentlyReading" > Currently Reading < /option> <
-                option value = "wantToRead" > Want to Read < /option> <
-                option value = "read" > Read < /option> <
-                option value = "none" > None < /option> < /
-                select > {
-                    this.state.updating && ( < div className = "cssload-spin-box" > < /div>)} < /
-                        div >
-                    )
-                }
-
-            }
-
-            export default ShelfUpdater
+                <option value = "move" disabled> Move to... </option>  
+                <option value = "currentlyReading"> Currently Reading </option>
+                <option value = "wantToRead"> Want to Read </option>                                              
+                <option value = "read"> Read </option> 
+                <option value = "none"> None </option> 
+                </select > 
+                {
+                this.state.updating && (< div className = "cssload-spin-box">
+                < /div>)}                                     
+                </div>
+                )
+               }
+           }
+           export default ShelfUpdater
