@@ -1,14 +1,13 @@
-import React from "react";
-// import * as BooksAPI from './BooksAPI'
-import * as BooksAPI from "./BooksAPI";
+import React, { Component } from "react";
 import { Link, Route } from "react-router-dom";
+import * as BooksAPI from "./BooksAPI";
 import ShelfBooks from "./Component/ShelfBooks";
 import SearchBooks from "./Component/SearchBooks";
 import "./App.css";
 
 class BooksApp extends React.Component {
     
-   MAX_RESULT = 30;
+   MAX_RESULTS = 40;
 
   state = {
     books: [],
@@ -31,7 +30,7 @@ class BooksApp extends React.Component {
     return this.state.books.filter((b) => b.shelf === shelfName)
   }
 
-  updateShelf = (book, newShelf) => {
+  updateShelf= (book, newShelf) => {
     BooksAPI.update(book, newShelf).then(() =>{
                
       book.shelf = newShelf;
@@ -44,8 +43,8 @@ class BooksApp extends React.Component {
 
   updateQuery = (query) => {
         if(query){
-            BooksAPI.search(query, this.MAX_RESULT).then((books) => {
-                // if the BookAPI.search worked properly, this would be unnecessary
+            BooksAPI.search(query, this.MAX_RESULTS).then((books) => {
+                
                 if(books.length){
                     books.forEach((book, index) => {
                         let myBook = this.state.books.find((b) => b.id === book.id);
