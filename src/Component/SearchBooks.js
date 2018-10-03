@@ -29,10 +29,10 @@ class SearchBooks extends Component {
                     <Link className="close-search" to="/">Close</Link>
                     <div className="search-books-input-wrapper">
                         <Debounce time="600" handler="onChange">
-                            <input
+                            <input 
                                 type="text"
                                 placeholder="Search by title or author"
-                                onChange={(evt) => this.updateQuery(evt.target.value)}
+                                onChange={(event) => this.updateQuery(event.target.value)}
                             />
                         </Debounce>
                     </div>
@@ -43,7 +43,7 @@ class SearchBooks extends Component {
                             <li key={book.id} className="contact-list-item">
                                 <Book
                                     book={book}
-                                    changeShelf={this.props.changeShelf} />
+                                    updateShelf={this.props.updateShelf} />
                             </li>
                         ))}
                     </ol>
