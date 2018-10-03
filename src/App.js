@@ -102,7 +102,7 @@ class BooksApp extends React.Component {
                     <SearchBooks
                         books={this.state.searchBooks}
                         updateQuery={this.updateQuery}
-                        updteShelf={this.updateShelf}
+                        updateShelf={this.updateShelf}
                     />
                 )}/>
             </div>
