@@ -40,3 +40,12 @@ search(query)
 * query: `<String>`
 * Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
 * These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+
+## Resources
+
+[udacity React Course](https://classroom.udacity.com/nanodegrees/nd001/parts/f4471fff-fffb-4281-8c09-2478625c9597)
+[Udacity html style guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+[Udacity css style guide ](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+[Udacity javascript style guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+[Udacity git style guide](https://udacity.github.io/git-styleguide/)
+[React tutorial](https://reactjs.org/)

@@ -4,7 +4,7 @@ Udacity gave us a starter template with static HTML markup and CSS. Our job was 
 
 
 ## Setup
-* downlaod or clone the project repo b ()
+* downlaod or clone the project repo  (https://github.com/udacity/reactnd-project-myreads-starter)
 * install all project dependencies with `npm install`, make sure to have the latest version
 * start the development server with `npm start`
 * An updated browser
