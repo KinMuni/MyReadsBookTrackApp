@@ -14,7 +14,8 @@ class Book extends Component {
 
     <div className="book" id={book.id}>
                 <div className="book-top">
-                    <div className="book-cover" style={{backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
+                    <div className="book-cover" style={{width: 128, height: 193, backgroundImage:book.imageLinks ? `url(${book.imageLinks.thumbnail})`: "" }}>
+                    </div>
                     <ShelfUpdater
                         book={book}
                         updateShelf={this.props.updateShelf}/>
