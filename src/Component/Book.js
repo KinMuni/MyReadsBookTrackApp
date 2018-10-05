@@ -20,11 +20,9 @@ class Book extends Component {
                         book={book}
                         updateShelf={this.props.updateShelf}/>
                 </div>
-                <div className="book-title">{book.name}</div>
+                <div className="book-title">{book.title}</div>
                 <div className="book-authors">{book.authors}</div>
             </div>
-
-
 
 
     	)
